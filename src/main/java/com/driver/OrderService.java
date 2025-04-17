@@ -16,6 +16,7 @@ public class OrderService {
     }
 
     public void addPartner(String partnerId){
+        System.out.println("saving");
         orderRepository.savePartner(partnerId);
     }
 
@@ -29,6 +30,7 @@ public class OrderService {
 
     public DeliveryPartner getPartnerById(String partnerId){
         partnerId = partnerId.trim();
+        System.out.println("Service layer - Looking for partner: '" + partnerId + "'");
         return orderRepository.findPartnerById(partnerId);
     }
 
