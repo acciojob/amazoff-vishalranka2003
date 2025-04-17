@@ -28,6 +28,7 @@ public class OrderService {
     }
 
     public DeliveryPartner getPartnerById(String partnerId){
+        partnerId = partnerId.trim();
         return orderRepository.findPartnerById(partnerId);
     }
 
@@ -62,5 +63,4 @@ public class OrderService {
     public String getLastDeliveryTimeByPartnerId(String partnerId){
         return orderRepository.findLastDeliveryTimeByPartnerId(partnerId);
     }
-
 }
